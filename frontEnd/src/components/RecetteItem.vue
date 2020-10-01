@@ -45,13 +45,13 @@ export default {
 }
 
 .recetteItem {
-  width:80%;
-  display:flex;
-  border:0.9px #554D4B solid;
-  border-radius:5%;
-  margin:1%;
-  margin-left:auto;
-  margin-right:auto;
+  width: 70%;
+  display: flex;
+  border: 0.9px #554D4B solid;
+  border-radius: 5%;
+  margin: 1%;
+  margin-left: auto;
+  margin-right: auto;
   flex-direction: column;
   text-align: center;
   font-family: "GravityBook";
@@ -59,9 +59,13 @@ export default {
 
 #img {
   object-fit: cover;
-  width:17em;
-  height:12em;
+  max-width: 100%;
+  max-height: 100%;
   border-radius: 5%;
+}
+
+#divImg {
+  margin-top: 2%;
 }
 
 img {
@@ -70,14 +74,21 @@ img {
 
 .titleLike {
   display : flex;
-  justify-content: space-around;
-  align-items: center;
+  justify-content: space-between;
+  margin-top: 2%;
 }
 
 #titleRecette {
-  margin-top : auto;
+  /*margin-top : auto;
   margin-bottom: "auto";
+  text-align: left;*/
   font-family: "GravityBook";
+  font-weight: lighter;
+  margin-left : 4%;
 }
 
+#likeHeart {
+  margin-top: 1%;
+  margin-right: 4%;
+}
 </style>

@@ -52,4 +52,8 @@ export default {
   color: #554D4B;
 }
 
+.inscriptionForm {
+  border-style: none none none dashed;
+}
+
 </style>

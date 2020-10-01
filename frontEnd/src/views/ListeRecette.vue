@@ -8,7 +8,7 @@
       <div class="whiteRect">
         <h1 class="titre"> Mes recettes </h1>
         <div class="allRecipes">
-          <div v-for="recette in recettes" :key="recette.title">
+          <div v-for="recette in recettes" :key="recette.title" class="recipesList">
             <RecetteItem :title="recette.title" img="/image/crepes.jpg" :like="recette.like" />
           </div>
         </div>
@@ -62,16 +62,19 @@ export default {
 
 .allRecipes{
   margin-top:10%;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.recipesList {
+  width: 50%;
 }
 
 .whiteRect {
   background:white;
   width:60%;
   border-radius: 3%;
-  display:flex;
-  flex-wrap:wrap;
+  display:block;
   margin-left:auto;
   margin-right: auto;
   padding-top: 2%;
@@ -100,12 +103,12 @@ h1 {
 }
 
 .deconnect {
-  margin-right: 5%;
+  margin-left: 10%;
   z-index: 2;
 }
 
 #logo {
-  margin-left: 18%;
+  margin-left: 13%;
   z-index: 1;
 }
 
