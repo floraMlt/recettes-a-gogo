@@ -45,35 +45,34 @@ export default {
 	font-family: 'VladimirScript';
 	src: url('./fonts/VLADIMIR.TTF');
 }
-
 @font-face {
 	font-family: 'GravityBook';
 	src: url('./fonts/Gravity-Book.otf');
 }
-
 @font-face {
 	font-family: 'GravityRegular';
 	src: url('./fonts/Gravity-Regular.otf');
 }
-
+*{
+box-sizing: border-box;
+}
+body {
+  background-color: #F8F1EB;
+}
 #app {
   font-family: "GravityBook", Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #554D4B;
-  background-color: #F8F1EB;
 }
-
 #nav {
   padding: 30px;
 }
-
 #nav a {
   font-weight: bold;
   color: #554D4B;
 }
-
 #nav a.router-link-exact-active {
   color: #42b983;
 }

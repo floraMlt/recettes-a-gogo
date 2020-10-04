@@ -1,9 +1,7 @@
 <template>
   <div class="recetteItem">
       <!--<h2  v-on:click="checkLike" :class="{'likeColor': liked, 'dislikeColor': !liked}" > {{title}} </h2> -->
-      <div id="divImg">
-        <img id="img" :alt="title" :src="img" v-on:click="goRecette">
-      </div>
+      <img id="img" :alt="title" :src="img" v-on:click="goRecette">
       <div class="titleLike">
         <h3 id="titleRecette" v-on:click="goRecette"> {{title}} </h3>
         <i id = "likeHeart" v-on:click="checkLike" :class="{'heart icon': liked, 'heart outline icon': !liked}"></i>
@@ -35,60 +33,48 @@ export default {
 </script>
 
 <style scoped>
-
-.likeColor {
+/*.likeColor {
     color:blue;
 }
-
 .dislikeColor {
     color:red;
-}
-
+}*/
 .recetteItem {
-  width: 70%;
-  display: flex;
-  border: 0.9px #554D4B solid;
+  font-family: "GravityBook";
+  text-align: center;
+  width: 200px;
+  border: 0.9px #554d4b59 solid;
   border-radius: 5%;
   margin: 1%;
   margin-left: auto;
   margin-right: auto;
+  padding: 1%;
+  display: flex;
   flex-direction: column;
-  text-align: center;
-  font-family: "GravityBook";
 }
-
 #img {
   object-fit: cover;
   max-width: 100%;
   max-height: 100%;
-  border-radius: 5%;
+  border-radius: 8px;
 }
-
-#divImg {
-  margin-top: 2%;
-}
-
 img {
     color:grey;
 }
-
 .titleLike {
   display : flex;
   justify-content: space-between;
+  align-items: center;
   margin-top: 2%;
 }
-
 #titleRecette {
-  /*margin-top : auto;
-  margin-bottom: "auto";
-  text-align: left;*/
   font-family: "GravityBook";
   font-weight: lighter;
-  margin-left : 4%;
+  margin: 4% 0 4% 4%;
 }
-
 #likeHeart {
   margin-top: 1%;
   margin-right: 4%;
+  margin-bottom: 4%;
 }
 </style>

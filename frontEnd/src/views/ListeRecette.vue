@@ -59,27 +59,25 @@ export default {
 </script>
 
 <style>
-
-.allRecipes{
-  margin-top:10%;
+.allRecipes {
+  margin-top: 3.5%;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
-
-.recipesList {
-  width: 50%;
-}
-
 .whiteRect {
   background:white;
   width:60%;
   border-radius: 3%;
-  display:block;
   margin-left:auto;
   margin-right: auto;
-  padding-top: 2%;
+  padding: 2% 0;
+  display: flex;
+  align-items: space-between;
 }
-
+.recipesList {
+  margin: 0.5%;
+}
 .titre {
   font-size: 3em;
   font-weight: lighter;
@@ -88,28 +86,26 @@ export default {
   margin-right: auto;
   font-family: "VladimirScript";
 }
-
 h1 {
   font-family: "VladimirScript";
-  color: #554D4B;
   font-size: 4em;
   font-weight: lighter;
+  color: #554D4B;
+  margin: 0;
 }
-
 .titleDeco {
   display: flex;
-  padding-top: 3%;
   justify-content: center;
+  align-items: center;
+  padding-top: 3%;
 }
-
 .deconnect {
-  margin-left: 10%;
+  position: relative;
+  margin-top: 1.2%;
   z-index: 2;
 }
-
 #logo {
   margin-left: 13%;
-  z-index: 1;
 }
 
 </style>
