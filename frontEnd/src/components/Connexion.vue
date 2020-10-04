@@ -51,18 +51,22 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .valider {
-  border: #554D4B 0.3px solid;
+  border: #554d4bb3 0.3px solid;
   background-color: white;
   border-radius: 50px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10%;
+  margin-top: 3%;
   font-family: "GravityBook";
 }
 .title {
   font-family: "VladimirScript";
   font-weight: lighter;
   font-size: 2.8em;
+}
+.connexion {
+  display: flex;
+  flex-direction: column;
 }
 
 </style>
