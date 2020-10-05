@@ -31,12 +31,6 @@
 export default {
   name: 'RecetteFull',
   props:{
-    /*title:{type:String, required:true},
-    img:{type:String, required:true},
-    txt:{type: String, required:true},
-    like:{type:Boolean, required:true},
-    author:{type: String, required:true},
-    comments:{type: String, required:false},*/
     recetteDetail:{type: Object, required:true}
   },
   data() {
@@ -47,7 +41,7 @@ export default {
   methods: {
     checkLike() { this.liked = !this.liked; 
     }
-  } // watch : indiquer un champs qui fait partie des props (recette) et on lui associe une fonction qui se lance dès qu'une modif est faite
+  }
 }
 </script>
 
@@ -67,6 +61,7 @@ li {
   justify-content: center;
   align-items: center;
   margin-bottom: 3%;
+  width: 100%;
 }
 #likeHeart {
   margin-top: 2.5%;
@@ -89,23 +84,25 @@ li {
   color: black;
 }
 .titleIngredient{
- text-align: center;
- font-size: 1.5em;
- font-weight: bold;
-   color: #554D4B;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
 }
 .txt {
-  background-color: #F2F2F2;
+  background-color: #FFFAF7;
   border: #554d4b3d 0.1px solid;
-  border-radius: 3px;
-  width: 70%;
+  border-radius: 5px;
+  width: 76%;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  font-size: 1em;
+  text-align: left;
+  margin-top: 1.8%;
+  padding-left: 1%;
 }
 .recetteFull {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  align-items: ;
 }
 </style>
