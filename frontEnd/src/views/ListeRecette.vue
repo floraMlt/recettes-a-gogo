@@ -64,6 +64,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: flex-start;
 }
 .whiteRect {
   background:white;
@@ -72,8 +73,6 @@ export default {
   margin-left:auto;
   margin-right: auto;
   padding: 2% 0;
-  display: flex;
-  align-items: space-between;
 }
 .recipesList {
   margin: 0.5%;
@@ -107,5 +106,4 @@ h1 {
 #logo {
   margin-left: 13%;
 }
-
 </style>

@@ -42,13 +42,13 @@ export default {
 .recetteItem {
   font-family: "GravityBook";
   text-align: center;
-  width: 200px;
+  width: 240px;
   border: 0.9px #554d4b59 solid;
   border-radius: 5%;
   margin: 1%;
   margin-left: auto;
   margin-right: auto;
-  padding: 1%;
+  padding: 1.5%;
   display: flex;
   flex-direction: column;
 }

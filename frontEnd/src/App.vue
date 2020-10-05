@@ -66,9 +66,6 @@ body {
   text-align: center;
   color: #554D4B;
 }
-#nav {
-  padding: 30px;
-}
 #nav a {
   font-weight: bold;
   color: #554D4B;
