@@ -6,6 +6,11 @@
       </div>
       <BarreNav/>
       <div class="whiteRect">
+        <div class="tools">
+          <button v-on:click="newRecipe" class="decoButton">Nouvelle recette</button>
+          <button v-on:click="changeRecipe" class="decoButton">Modifier</button>
+          <button v-on:click="removeRecipe" class="decoButton">Supprimer</button>
+        </div>
         <div class="DetailRecipe">
             <!-- <RecetteFull :title="this.recette.title" :img="this.recette.img" :like="this.recette.like" :txt="this.recette.txt" :comments="this.recette.comments"/> -->
           <RecetteFull :recetteDetail="this.recette"/>
@@ -31,11 +36,6 @@ export default {
   },
   data(){
     return {
-      /*txtRecette : "",
-      titleRecette : "",
-      imgRecette : "",
-      likeRecette : "",
-      commentRecette : "",*/
       recette : {}
     }
   },
@@ -46,11 +46,19 @@ export default {
     async readRecipe(){
       var recetteResult = await RecetteApi.read(this.$parent.idUser, this.$route.params.title, CookieService.getCookie('token'))
       this.recette = recetteResult.data
-      /*this.txtRecette = this.recette.txt;
-      this.titleRecette = this.recette.title;
-      this.imgRecette = this.recette.img;
-      this.likeRecette = this.recette.like;
-      this.commentRecette = this.recette.comments;*/
+    },
+    async newRecipe() {
+      console.log("new recipe")
+      /*await RecetteApi.create(this.$parent.idUser, this.$route.params.title, this.$route.params.txt, CookieService.getCookie('token'))
+      this.$router.push({name:'ListeRecette'})*/
+    },
+    async changeRecipe() {
+        await RecetteApi.edit(this.$parent.idUser, this.$route.params.title, this.$route.params.txt, CookieService.getCookie('token'))
+        this.$router.push({name:'PageRecette'})
+    },
+    async removeRecipe() {
+        await RecetteApi.delete(this.$parent.idUser, CookieService.getCookie('token'))
+        this.$router.push({name:'ListeRecette'})
     }
   }
 }
@@ -83,18 +91,15 @@ h1 {
   margin-top: 1.2%;
   z-index: 2;
 }
+.decoButton {
+  border: #554D4B 0.3px solid;
+  background-color: rgba(85,77,75,0.8);
+  color: #F8F1EB;
+  border-radius: 50px;
+  font-family: "GravityBook";
+  margin: auto;
+}
 #logo {
   margin-left: 13%;
 }
-/*.allRecipes{
-  margin-top:10%;
-}
-.whiteRect {
-  background:#fff9f0;
-  width:60%;
-  display:flex;
-  flex-wrap:wrap;
-  margin-left:auto;
-  margin-right: auto;
-}*/
 </style>

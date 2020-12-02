@@ -1,7 +1,7 @@
 <template>
   <div class="inputAuth">
       <p class="titleInput"> {{titreInput}} </p>
-      <input class="input" v-model="valInput">
+      <input class="input" v-model="valInput" :type="typeInput">
   </div>
 </template>
 
@@ -9,7 +9,8 @@
 export default {
   name: 'InputAuth',
   props:{
-    titreInput:{type:String, required:true}
+    titreInput:{type:String, required:true},
+    typeInput:{type:String, required:true}
   },
   data() {
       return{

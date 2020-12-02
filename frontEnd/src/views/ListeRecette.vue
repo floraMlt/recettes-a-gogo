@@ -34,11 +34,7 @@ export default {
     return { 
      activeLike:true,
      recettes:
-      [
-        //{title:"Crêpes", txt:"kdeoi", like:true},
-        //{title:"Gratin de courgettes", txt:"odped", like:false},
-        //{title:"Lasagnes", txt:"qpojs", like:true}
-      ]
+      []
   }},
   mounted() {
     this.readAllRecipe()
@@ -48,11 +44,8 @@ export default {
       this.activeLike = !this.activeLike
     },
     async readAllRecipe() {
-      //console.log('IdUser Liste recette = ' + this.$parent.idUser)
-      //console.log('token Liste recette = ' + CookieService.getCookie('token'))
       var resultRecettes = await RecetteApi.getAll(this.$parent.idUser, CookieService.getCookie('token'))
       this.recettes = resultRecettes.data
-      //console.log('recettes tableau = ' + this.recettes)
     }
   }
 }

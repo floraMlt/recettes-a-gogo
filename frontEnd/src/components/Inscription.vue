@@ -1,11 +1,10 @@
 <template>
   <div class="inscription">
       <h2 class="title"> Inscription </h2>
-      <InputAuth titreInput="Pseudo" ref="pseudoInput"/>
-      <InputAuth titreInput="Mot de passe" ref="mdpInput"/>
+      <InputAuth titreInput="Pseudo" typeInput="text" ref="pseudoInput"/>
+      <InputAuth titreInput="Mot de passe" typeInput="password" ref="mdpInput"/>
       <button v-on:click="validForm" class="valider"> Valider </button> 
       <p v-if="errorState">Désolé, l'inscription n'a pas marché</p>
-      <!--<router-link :to="{name: 'ListeRecette'}">S'inscrire</router-link>-->
   </div>
 </template>
 

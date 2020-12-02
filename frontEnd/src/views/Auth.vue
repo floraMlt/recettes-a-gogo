@@ -1,6 +1,6 @@
 <template>
   <div class="auth">
-    <h1>Authentification</h1>
+    <h1 id="authentTitle">Authentification</h1>
     <div class="authRect">
     <h2 class="txt"> Avant tout, il faut se connecter ! </h2>
       <div class="form">
@@ -33,9 +33,11 @@ export default {
 }
 .auth {
   background-color: #F8F1EB;
-  height: 100%;
   width: 100%;
-  position: absolute;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .authRect {
   background-color: white;
@@ -56,6 +58,9 @@ export default {
   border-style: none none none dashed;
   border-color: #F8F1EB;
   border-width: 3px;
+}
+#authentTitle {
+  margin-bottom: 40px;
 }
 
 /*.inscriptionForm {

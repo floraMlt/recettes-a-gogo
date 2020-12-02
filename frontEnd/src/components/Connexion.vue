@@ -1,11 +1,10 @@
 <template>
   <div class="connexion">
       <h2 class="title"> Connexion </h2>
-      <InputAuth titreInput="Pseudo" ref="pseudoInput"/>
-      <InputAuth titreInput="Mot de passe" ref="mdpInput"/>
+      <InputAuth titreInput="Pseudo" typeInput="text" ref="pseudoInput"/>
+      <InputAuth titreInput="Mot de passe" typeInput="password" ref="mdpInput"/>
       <button v-on:click="validForm" class="valider"> Valider </button>
       <p v-if="errorState">Désolé, la connexion a échoué</p>
-      <!-- <router-link :to="{name: 'ListeRecette'}">Se connecter</router-link> -->
   </div>
 </template>
 

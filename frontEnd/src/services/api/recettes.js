@@ -1,8 +1,5 @@
-import {api} from './api' // on récupère la variable api créée dans api.js dans un objet
+import {api} from './api'
 
-// fonction ES6
-// async : fonction asynchrone
-// await : l'élément à attendre pour lancer la fonction
 export default {
     create : async (idUser, titleRecipe, txtRecipe, token) => {
         return await api.post("recipe", {user : {id:idUser}, recipe: {title:titleRecipe, txt:txtRecipe}}, {headers : {"Authorization" : "Bearer " + token}}) // requête POST(complément URL de départ, objet qui va contenir les champs à mettre dans le body)

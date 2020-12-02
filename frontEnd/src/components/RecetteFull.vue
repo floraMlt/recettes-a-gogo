@@ -35,7 +35,7 @@ export default {
   },
   data() {
       return {
-          liked : this.recetteDetail.like
+        liked : this.recetteDetail.like
       }
   },
   methods: {

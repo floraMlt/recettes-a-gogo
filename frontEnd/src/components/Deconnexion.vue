@@ -8,9 +8,9 @@
 import CookieService from '@/services/cookies/cookies.js'
 
 export default {
-  name: 'Connexion',
+  name: 'Deconnexion',
   components:{},
-  methods:{ // enlever token cookie et rediriger vers page d'accueil
+  methods:{
     async deconnect() {
         CookieService.deleteCookie("token")
         this.$router.push({name:'Auth'})
